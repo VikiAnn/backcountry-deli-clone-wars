@@ -24,7 +24,7 @@
 <!--		<meta name="viewport" content="width=1140"/> -->
 		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
 		<link rel="apple-touch-icon" href="wp-content/themes/bones/library/images/apple-icon-touch.png">
-		
+
 		<link rel="icon" href="wp-content/themes/bones/favicon.png">
 		<!--[if IE]>
 			<link rel="shortcut icon" href="http://backcountry-deli.com/wp-content/themes/bones/favicon.ico">
@@ -34,10 +34,10 @@
 		<meta name="msapplication-TileImage" content="http://backcountry-deli.com/wp-content/themes/bones/library/images/win8-tile-icon.png">
 
   	<link rel="pingback" href="xmlrpc.php">
-  
-		
+
+
 		<!-- wordpress head functions -->
-		
+
 <!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.6 - https://yoast.com/wordpress/plugins/seo/ -->
 <link rel="canonical" href="index.html?p=6" />
 <meta property="og:locale" content="en_US" />
@@ -127,7 +127,7 @@ bb2_addLoadEvent(function() {
 
 		<!-- drop Google Analytics Here -->
 		<!-- end analytics -->
-		
+
 
 	</head>
 
@@ -169,31 +169,31 @@ bb2_addLoadEvent(function() {
 	<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="location-steamboat-springs-co.html" >Steamboat Springs, CO</a></li>
 </ul>
 </li>
-<li id="menu-item-551" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-551"><a href="index.html?p=527" >Order Online</a>
+<li id="menu-item-551" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-551"><a href="order_wazee_denver.html" >Order Online</a>
 <ul class="sub-menu">
-	<li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="index.html?p=527" >Denver – Wazee St</a></li>
-	<li id="menu-item-672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-672"><a href="index.html?p=643" >Denver &#8211; 17th &#038; Glenarm</a></li>
-	<li id="menu-item-547" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-547"><a href="index.html?p=530" >Fort Collins</a></li>
-	<li id="menu-item-546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-546"><a href="index.html?p=538" >Jackson</a></li>
-	<li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a href="index.html?p=541" >Steamboat</a></li>
+	<li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="order_wazee_denver.html" >Denver – Wazee St</a></li>
+	<li id="menu-item-672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-672"><a href="order_glenarm_denver.html" >Denver &#8211; 17th &#038; Glenarm</a></li>
+	<li id="menu-item-547" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-547"><a href="order_fort_collins.html" >Fort Collins</a></li>
+	<li id="menu-item-546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-546"><a href="order_jackson.html" >Jackson</a></li>
+	<li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a href="order_steamboat.html" >Steamboat</a></li>
 </ul>
 </li>
 </ul>					</nav>
 				</div> <!-- nav_wrapper -->
 
 			</header> <!-- end header -->
-			
+
 			<div id="content">
-			
+
 				<div id="inner-content" class="wrap clearfix">
-			
+
 				    <div id="main" class="eightcol first clearfix" role="main">
 
 					    					    <article id="post-6" class="post-6 page type-page status-publish hentry clearfix" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 							<header class="article-header">
 							    							    <h1 class="page-title" itemprop="headline">Our Story</h1>
 						    </header> <!-- end article header -->
-					
+
 						    <section class="entry-content clearfix" itemprop="articleBody">
 							    <p>Take two fun-loving, yet seriously dedicated guys. Add passion for adventure in the great outdoors, and an equal amount of passion for natural, nutritious, great tasting food that can fuel their lifestyle. Throw in a heavy dose of community involvement. What do you get? Backcountry Delicatessen.</p>
 <p>That’s the recipe that Peter Boniface and David Pepin used to start it all in 1999 in downtown Steamboat Springs. Today, Backcountry Delicatessens are enjoyed in three additional vibrant and active communities — Jackson Hole, Fort Collins, and Denver. In every Backcountry Deli you visit, you’ll find the same commitment to Peter’s and David’s beginning principles — always natural and fresh ingredients, always the best fare they can make, always the best service they can provide.</p>
@@ -203,35 +203,35 @@ bb2_addLoadEvent(function() {
 <p>Why? Because when we first opened, virtually every outdoor expedition in the Steamboat Springs region — whether skiing, cycling, rafting, or climbing — made sure to pack into their essential provisions the one thing that made a successful day of adventure certain. Backcountry Provisions fare!</p>
 <p>Today, we’re pleased to unveil a new name and look to better embody our continued commitment to you and adventurers of every kind.</p>
 							</section> <!-- end article section -->
-						
+
 						    <footer class="article-footer"> </footer> <!-- end article footer -->
-						    
+
 <!-- You can start editing here. -->
 
 
-		
+
 	<!-- If comments are closed. -->
 	<!--p class="nocomments">Comments are closed.</p-->
 
-	
+
 
 
 					    </article> <!-- end article -->
-					
-					    			
+
+
     				</div> <!-- end #main -->
 				    	<div id="page_sidebar" class="sidebar">
 		<div id="black-studio-tinymce-2" class="widget widget_black_studio_tinymce"><div class="textwidget"><p style="font-size: 17px; line-height: 21px;"><img class="alignnone size-full wp-image-422" alt="Dave-and-Pete-1999" src="wp-content/uploads/2013/02/Dave-and-Pete-1999.jpg" width="253" height="150" />Dave and Pete opening the Steamboat Springs Deli - circa 1999</p>
 <p style="font-size: 17px; line-height: 21px;"><img class="alignnone  wp-image-402" alt="BackcountryDeli-Skiing" src="wp-content/uploads/2013/02/BackcountryDeli-Skiing-e1364560089235-300x178.jpg" width="253" height="150" />The boys today kicking back</p>
 <p><a href="wp-content/uploads/2013/02/BSD-Creed-small.png" ><img class="alignnone size-full wp-image-458" alt="BSD-Creed-small" src="wp-content/uploads/2013/02/BSD-Creed-small.png" width="253" height="363" /></a></p>
 <p> </p></div></div>	</div>
-				    
+
 				</div> <!-- end #inner-content -->
-    
+
 			</div> <!-- end #content -->
 
 			<footer class="footer" role="contentinfo">
-			
+
 				<div id="inner-footer" class="wrap clearfix">
 
 					<div id="footer_buttons">
@@ -244,8 +244,7 @@ bb2_addLoadEvent(function() {
 						</div> <!-- mail-foot -->
 
 					</div> <!-- footer_buttons -->
-				
-					
+
 	<div id="black-studio-tinymce-7" class="footer-containers widget_black_studio_tinymce"><div class="textwidget"><h2><a title="Denver, CO" href="location-denver-lodo-co.html">Denver, CO</a></h2>
 <div class="clearfix"> </div>
 <p>Mon - Fri 7 am - 6 pm<br />Sat - Sun 8 am - 6 pm</p>
@@ -270,14 +269,14 @@ bb2_addLoadEvent(function() {
 <p>970-879-3617</p>
 <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span></a></strong></span><a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" /></a></p>
 </br></br></br></br><p style="line-height: 1em;" ><span style="color: #333333; font-size:80%;">Branding &amp; Website by </span><a style="color: #333333; font-size:80%;" href="http://www.onetribecreative.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.onetribecreative.com']);" target="_blank">One Tribe Creative</a></span></p></div></div>
-				
+
 
 				</div> <!-- end #inner-footer -->
-				
+
 			</footer> <!-- end footer -->
-		
+
 		</div> <!-- end #container -->
-		
+
 		<!-- all js scripts are loaded in library/bones.php -->
 		<script type="text/javascript">
 
