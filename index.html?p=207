@@ -140,7 +140,7 @@ bb2_addLoadEvent(function() {
 					<ul id="menu-tippy-top-nav" class="nav tippy-top-nav clearfix"><li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="our_story.html" >Our Story</a></li>
 <li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-207 current_page_item menu-item-322"><a href="index.html?p=207" >Social Love</a></li>
 <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="index.html?p=7" >Franchise Info</a></li>
-<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="index.html?p=8" >Contact Us</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="contact-us.html" >Contact Us</a></li>
 </ul>					<div id="the_logo">
 						<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
 						<a href="index.html" rel="nofollow"><img src="wp-content/themes/bones/library/images/logo.png" alt="logo" width="309" height="183"></a>
