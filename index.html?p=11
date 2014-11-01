@@ -162,7 +162,7 @@ bb2_addLoadEvent(function() {
 <li id="menu-item-187" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-11 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-187"><a href="index.html?p=11" >Locations</a>
 <ul class="sub-menu">
 	<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="index.html?p=17" >Denver &#8211; LoDo</a></li>
-	<li id="menu-item-661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-661"><a href="index.html?p=653" >Denver &#8211; Downtown</a></li>
+	<li id="menu-item-661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-661"><a href="location-downtown.html" >Denver &#8211; Downtown</a></li>
 	<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="index.html?p=15" >Fort Collins, CO</a></li>
 	<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="index.html?p=13" >Jackson Hole, WY</a></li>
 	<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-11 current_page_item menu-item-27"><a href="index.html?p=11" >Steamboat Springs, CO</a></li>
