@@ -37,4 +37,8 @@ class BackCountryApp < Sinatra::Base
   get '/salads_soups_sides_drinks' do
     erb :salads_soups_sides_drinks
   end
+
+  get '/catering_menu' do
+    erb :catering_menu
+  end
 end
