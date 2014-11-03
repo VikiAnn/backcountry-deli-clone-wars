@@ -10,4 +10,8 @@ class BackCountryApp < Sinatra::Base
     erb :our_story
   end
 
+  get '/social' do
+    erb :social
+  end
+
 end
