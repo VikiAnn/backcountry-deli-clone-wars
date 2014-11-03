@@ -14,4 +14,7 @@ class BackCountryApp < Sinatra::Base
     erb :social
   end
 
+  get '/franchise' do
+    erb :franchise
+  end
 end
