@@ -25,4 +25,8 @@ class BackCountryApp < Sinatra::Base
   get '/specialty_sandwiches' do
     erb :specialty_sandwiches
   end
+
+  get '/hot_breakfast_sandwiches' do
+    erb :hot_breakfast_sandwiches
+  end
 end
