@@ -65,4 +65,8 @@ class BackCountryApp < Sinatra::Base
   get '/order_wazee_denver' do
     erb :order_wazee_denver
   end
+
+  get '/layout' do
+    erb :layout
+  end
 end
