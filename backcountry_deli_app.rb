@@ -6,5 +6,8 @@ class BackCountryApp < Sinatra::Base
     erb :index
   end
 
-  
+  get '/our_story' do
+    erb :our_story
+  end
+
 end
