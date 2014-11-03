@@ -17,4 +17,8 @@ class BackCountryApp < Sinatra::Base
   get '/franchise' do
     erb :franchise
   end
+
+  get '/contact_us' do 
+    erb :contact_us
+  end
 end
