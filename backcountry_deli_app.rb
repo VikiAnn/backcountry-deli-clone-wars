@@ -29,4 +29,8 @@ class BackCountryApp < Sinatra::Base
   get '/hot_breakfast_sandwiches' do
     erb :hot_breakfast_sandwiches
   end
+
+  get '/build_your_own' do
+    erb :build_your_own
+  end
 end
