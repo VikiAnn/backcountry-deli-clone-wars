@@ -50,7 +50,11 @@ class BackCountryApp < Sinatra::Base
     erb :location_denver_lodo_co
   end
 
-  get '/location_denver_downtown_co' do 
+  get '/location_denver_downtown_co' do
     erb :location_denver_downtown_co
+  end
+
+  get '/location_fort_collins_co' do
+    erb :location_fort_collins_co
   end
 end
