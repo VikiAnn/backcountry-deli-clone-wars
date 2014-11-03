@@ -33,4 +33,8 @@ class BackCountryApp < Sinatra::Base
   get '/build_your_own' do
     erb :build_your_own
   end
+
+  get '/salads_soups_sides_drinks' do
+    erb :salads_soups_sides_drinks
+  end
 end
