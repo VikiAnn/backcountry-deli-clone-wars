@@ -58,7 +58,11 @@ class BackCountryApp < Sinatra::Base
     erb :location_fort_collins_co
   end
 
-  get '/location_jackson_hole_wy' do 
-    erb :location_jackson_hole_wy 
+  get '/location_jackson_hole_wy' do
+    erb :location_jackson_hole_wy
+  end
+
+  get '/order_wazee_denver' do
+    erb :order_wazee_denver
   end
 end
