@@ -41,4 +41,8 @@ class BackCountryApp < Sinatra::Base
   get '/catering_menu' do
     erb :catering_menu
   end
+
+  get '/location_steamboat_springs_co' do
+    erb :location_steamboat_springs_co
+  end
 end
