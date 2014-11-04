@@ -56,12 +56,15 @@ class BackCountryApp < Sinatra::Base
 
   get '/salads_soups_sides_drinks' do
     erb :salads_soups_sides_drinks, locals:{page_name:  :salads_soups_sides_drinks,
-                                            title: "Salads, Soups, Sides, Drinks",
+                                            title: "Salads, Soups, Sides, Drinks - Backcountry Delicatessen",
                                             body_class:  "page page-id-47 page-child parent-pageid-9 page-template page-template-page-menu-php"}
   end
 
   get '/catering_menu' do
-    erb :catering_menu
+    erb :catering_menu, locals:{page_name: :catering_menu,
+                                title: "Catering Menu - Backcountry Delicatessen",
+                                body_class: "page page-id-299 page-child parent-pageid-9 page-template page-template-page-menu-php"
+                                }
   end
 
   get '/location_steamboat_springs_co' do
