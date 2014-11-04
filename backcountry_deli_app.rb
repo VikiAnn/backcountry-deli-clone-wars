@@ -82,7 +82,10 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/location_fort_collins_co' do
-    erb :location_fort_collins_co
+    erb :location_fort_collins_co, locals:{page_name: :location_fort_collins_co,
+                                           title: "Fort Collins, CO - Backcountry Delicatessen",
+                                           body_class: "page page-id-15 page-child parent-pageid-10 page-template page-template-page-location-php"
+                                           }
   end
 
   get '/location_jackson_hole_wy' do
