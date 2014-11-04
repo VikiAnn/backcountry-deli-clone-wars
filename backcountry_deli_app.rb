@@ -43,13 +43,16 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/build_your_own' do
-    erb :build_your_own, locals:{title: "Build Your Own Sandwich - Backcountry Delicatessen",
-                                 body_class: "page page-id-49"}
+    erb :build_your_own, locals:{page_name: :build_your_own,
+                                 title: "Build Your Own Sandwich - Backcountry Delicatessen",
+                                 body_class: "page page-id-49 page parent page-template-default"}
   end
   # "page page-id-49 page-child parent-pageid-9 page-template page-template-page-menu-php"
 
   get '/salads_soups_sides_drinks' do
-    erb :salads_soups_sides_drinks
+    erb :salads_soups_sides_drinks, locals:{page_name:  :salads_soups_sides_drinks,
+                                            title: "Salads, Soups, Sides, Drinks",
+                                            body_class:  "page page-id-47 page-child parent-pageid-9 page-template page-template-page-menu-php"}
   end
 
   get '/catering_menu' do
