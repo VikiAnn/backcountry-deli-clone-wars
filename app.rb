@@ -2,18 +2,12 @@ require 'bundler'
 Bundler.require
 
 
-class BackCountryApp < Sinatra::Base
-
-  # get '/admin' do
-  #   puts "admin page"
-  # end
-
+class App < Sinatra::Base
   get '/' do
     erb :index, locals:{page_name: :index,
                         title: "Home - Backcountry Delicatessen",
                         body_class: "home page-id-2"}
   end
-  # home page page-id-2 page-template page-template-page-home-php
 
   get '/customer_policies' do
     erb :customer_policies, locals:{page_name:  :customer_policies,
@@ -94,7 +88,6 @@ class BackCountryApp < Sinatra::Base
                                  title: "Build Your Own Sandwich - Backcountry Delicatessen",
                                  body_class: "page page-id-49 page-child parent-pageid-9 page-template page-template-page-menu-php"}
   end
-  # "page page-id-49 page-child parent-pageid-9 page-template page-template-page-menu-php"
 
   get '/salads_soups_sides_drinks' do
     erb :salads_soups_sides_drinks, locals:{page_name:  :salads_soups_sides_drinks,
@@ -146,11 +139,11 @@ class BackCountryApp < Sinatra::Base
                                      body_class: "page page-id-527 page-child parent-pageid-131 page-template page-template-page-home-php"}
   end
 
-    get '/admin' do
-      protected!
-      erb :admin, locals:{title: "Admin - Backcountry Delicatessen",
-                          body_class: "page"}
-    end
+  get '/admin' do
+    protected!
+    erb :admin, locals:{title: "Admin - Backcountry Delicatessen",
+                        body_class: "page"}
+  end
 
   def protected!
     return if authorized?
