@@ -83,7 +83,9 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/location_jackson_hole_wy' do
-    erb :location_jackson_hole_wy
+    erb :location_jackson_hole_wy, locals:{page_name:  :location_jackson_hole_wy,
+                                           title:  "Jackson Hole, WY - Backcountry Delicatessen",
+                                           body_class:  "page page-id-13 page-child parent-pageid-10 page-template page-template-page-location-php" }
   end
 
   get '/order_wazee_denver' do
