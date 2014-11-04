@@ -22,6 +22,12 @@ class BackCountryApp < Sinatra::Base
                                     body_class:  "page page-id-436 page-template-default"}
   end
 
+  get '/order_fort_collins' do 
+    erb :order_fort_collins, locals:{page_name:  :order_fort_collins,
+                                     title: "Order Online – Fort Collins - Backcountry Delicatessen",
+                                     body_class:  "page page-id-530 page-child parent-pageid-131 page-template page-template-page-home-php" }
+  end
+
   get '/social' do
     erb :social
   end
