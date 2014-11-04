@@ -50,7 +50,7 @@ class BackCountryApp < Sinatra::Base
   get '/build_your_own' do
     erb :build_your_own, locals:{page_name: :build_your_own,
                                  title: "Build Your Own Sandwich - Backcountry Delicatessen",
-                                 body_class: "page page-id-49 page parent page-template-default"}
+                                 body_class: "page page-id-49 page-child parent-pageid-9 page-template page-template-page-menu-php"}
   end
   # "page page-id-49 page-child parent-pageid-9 page-template page-template-page-menu-php"
 
@@ -65,7 +65,9 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/location_steamboat_springs_co' do
-    erb :location_steamboat_springs_co
+    erb :location_steamboat_springs_co, locals:{page_name: :steamboat,
+                                                title: "Steamboat Springs, CO - Backcountry Delicatessen",
+                                                body_class: "page page-id-11 page-child parent-pageid-10 page-template page-template-page-location-php"}
   end
 
   get '/location_denver_lodo_co' do
