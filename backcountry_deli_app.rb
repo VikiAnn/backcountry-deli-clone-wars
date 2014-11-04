@@ -94,6 +94,8 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/order_wazee_denver' do
-    erb :order_wazee_denver
+    erb :order_wazee_denver, locals:{page_name: :order,
+                                     title: "Order Online – Denver - Backcountry Delicatessen",
+                                     body_class: "page page-id-527 page-child parent-pageid-131 page-template page-template-page-home-php"}
   end
 end
