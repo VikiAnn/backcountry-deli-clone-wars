@@ -67,15 +67,9 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/hot_breakfast_sandwiches' do
-<<<<<<< HEAD
     erb :hot_breakfast_sandwiches, locals:{page_name: :breakfast,
                                            title: "Hot Breakfast Sandwiches",
                                            body_class: "page page-id-51 page-child parent-pageid-9 page-template page-template-page-menu-php"}
-=======
-    erb :hot_breakfast_sandwiches, locals:{page_name: :hot_breakfast_sandwiches,
-                                           title:  "Hot Breakfast Sandwiches - Backcountry Delicatessen",
-                                           body_class:  "page page-id-51 page-child parent-pageid-9 page-template page-template-page-menu-php"}
->>>>>>> adam-layout-clean
   end
 
   get '/build_your_own' do
