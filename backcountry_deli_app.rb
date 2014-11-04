@@ -16,6 +16,12 @@ class BackCountryApp < Sinatra::Base
                             body_class:  "page page-id-6 page-template-default"}
   end
 
+  get '/customer_policies' do
+    erb :customer_policies, locals:{page_name:  :customer_policies,
+                                    title:  "Backcountry Policies - Backcountry Delicatessen",
+                                    body_class:  "page page-id-436 page-template-default"}
+  end
+
   get '/social' do
     erb :social
   end
