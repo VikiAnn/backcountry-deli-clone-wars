@@ -3,8 +3,11 @@ Bundler.require
 
 class BackCountryApp < Sinatra::Base
   get '/' do
-    erb :index
+    erb :index, locals:{page_name: :index,
+                        title: "Home - Backcountry Delicatessen",
+                        body_class: "home page-id-2"}
   end
+  # home page page-id-2 page-template page-template-page-home-php
 
   get '/our_story' do
     erb :our_story
@@ -31,8 +34,10 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/build_your_own' do
-    erb :build_your_own
+    erb :build_your_own, locals:{title: "Build Your Own Sandwich - Backcountry Delicatessen",
+                                 body_class: "page page-id-49"}
   end
+  # "page page-id-49 page-child parent-pageid-9 page-template page-template-page-menu-php"
 
   get '/salads_soups_sides_drinks' do
     erb :salads_soups_sides_drinks
