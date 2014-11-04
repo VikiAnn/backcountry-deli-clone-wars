@@ -1,6 +1,8 @@
 require 'bundler'
 Bundler.require
 
+#test
+
 class BackCountryApp < Sinatra::Base
   get '/' do
     erb :index, locals:{page_name: :index,
