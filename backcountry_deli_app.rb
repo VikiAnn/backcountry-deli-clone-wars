@@ -23,7 +23,9 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/franchise' do
-    erb :franchise
+    erb :franchise, locals:{page_name: :franchise,
+                            title:  "Franchise Info",
+                            body_class:  "page page-id-7 page-template-default"}
   end
 
   get '/contact_us' do
@@ -31,7 +33,9 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/specialty_sandwiches' do
-    erb :specialty_sandwiches
+    erb :specialty_sandwiches, locals:{page_name: :specialty_sandwiches,
+                                       title: "Specialty Sandwiches",
+                                       body_class:  "page page-id-9 page-parent page-template-default" }
   end
 
   get '/hot_breakfast_sandwiches' do
