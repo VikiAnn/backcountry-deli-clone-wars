@@ -3,6 +3,11 @@ Bundler.require
 
 
 class BackCountryApp < Sinatra::Base
+
+  # get '/admin' do
+  #   puts "admin page"
+  # end
+
   get '/' do
     erb :index, locals:{page_name: :index,
                         title: "Home - Backcountry Delicatessen",
@@ -10,19 +15,19 @@ class BackCountryApp < Sinatra::Base
   end
   # home page page-id-2 page-template page-template-page-home-php
 
-  get '/customer_policies' do 
+  get '/customer_policies' do
     erb :customer_policies, locals:{page_name:  :customer_policies,
                                     title:  "Backcountry Policies - Backcountry Delicatessen",
                                     body_class:  "page page-id-436 page-template-default"}
   end
 
-  get '/order_steamboat' do 
+  get '/order_steamboat' do
     erb :order_steamboat, locals:{page_name:  :order_steamboat,
                                   title:  "Order Online – Steamboat Springs - Backcountry Delicatessen",
                                   body_class:  "page page-id-541 page-child parent-pageid-131 page-template page-template-page-home-php"}
   end
 
-  get '/order_jackson' do 
+  get '/order_jackson' do
     erb :order_jackson, locals:{page_name:  :order_jackson,
                                 title:  "Order Online – Jackson Hole - Backcountry Delicatessen",
                                 body_class:  "page page-id-538 page-child parent-pageid-131 page-template page-template-page-home-php"}
@@ -34,7 +39,7 @@ class BackCountryApp < Sinatra::Base
                             body_class: "page page-id-6 page-template-default"}
   end
 
-  get '/order_glenarm_denver' do 
+  get '/order_glenarm_denver' do
     erb :order_glenarm_denver, locals:{page_name:  :order_glenarm_denver,
                                        title:  "Order Online - Denver 17th & Glenarm - Backcountry Delicatesse",
                                        body_class:  "page page-id-643 page-template page-template-page-home-php"}
@@ -46,7 +51,7 @@ class BackCountryApp < Sinatra::Base
                                     body_class:  "page page-id-436 page-template-default"}
   end
 
-  get '/order_fort_collins' do 
+  get '/order_fort_collins' do
     erb :order_fort_collins, locals:{page_name:  :order_fort_collins,
                                      title: "Order Online – Fort Collins - Backcountry Delicatessen",
                                      body_class:  "page page-id-530 page-child parent-pageid-131 page-template page-template-page-home-php" }
@@ -139,5 +144,23 @@ class BackCountryApp < Sinatra::Base
     erb :order_wazee_denver, locals:{page_name: :order,
                                      title: "Order Online – Denver - Backcountry Delicatessen",
                                      body_class: "page page-id-527 page-child parent-pageid-131 page-template page-template-page-home-php"}
+  end
+
+    get '/admin' do
+      protected!
+      erb :admin, locals:{title: "Admin - Backcountry Delicatessen",
+                          body_class: "page"}
+    end
+
+  def protected!
+    return if authorized?
+    headers['WWW-Authenticate'] = 'Basic realm="Restricted area"'
+    halt 401, "Halt:\n Not authorized\n"
+  end
+
+  def authorized?
+    @auth ||= Rack::Auth::Basic::Request.new(request.env)
+    @auth.provided? && @auth.basic? &&
+    @auth.credentials && @auth.credentials == ['backcountry', 'deli']
   end
 end
