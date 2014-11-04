@@ -10,7 +10,9 @@ class BackCountryApp < Sinatra::Base
   # home page page-id-2 page-template page-template-page-home-php
 
   get '/our_story' do
-    erb :our_story
+    erb :our_story, locals:{page_name: :our_story,
+                            title: "Our Story - Backcountry Delicatessen",
+                            body_class: "page page-id-6 page-template-default"}
   end
 
   get '/social' do
