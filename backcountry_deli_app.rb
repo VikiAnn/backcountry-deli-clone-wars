@@ -39,7 +39,9 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/hot_breakfast_sandwiches' do
-    erb :hot_breakfast_sandwiches
+    erb :hot_breakfast_sandwiches, locals:{page_name: :breakfast,
+                                           title: "Hot Breakfast Sandwiches",
+                                           body_class: "page page-id-51 page-child parent-pageid-9 page-template page-template-page-menu-php"}
   end
 
   get '/build_your_own' do
