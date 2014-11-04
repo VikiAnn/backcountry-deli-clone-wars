@@ -14,7 +14,10 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/social' do
-    erb :social
+    erb :social, locals:{page_name: :social,
+                         title: "Social Love - Backcountry Delicatessen",
+                         body_class: "page page-id-207 page-template-default"
+                         }
   end
 
   get '/franchise' do
