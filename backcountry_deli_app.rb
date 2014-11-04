@@ -1,7 +1,6 @@
 require 'bundler'
 Bundler.require
 
-#test
 
 class BackCountryApp < Sinatra::Base
   get '/' do
