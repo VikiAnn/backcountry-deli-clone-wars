@@ -78,7 +78,9 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/location_denver_downtown_co' do
-    erb :location_denver_downtown_co
+    erb :location_denver_downtown_co, locals:{page_name: :downtown,
+                                              title: "Denver 17th & Glenarm - Backcountry Delicatessen",
+                                              body_class: "page page-id-653 page-child parent-pageid-10 page-template page-template-page-location-php"}
   end
 
   get '/location_fort_collins_co' do
