@@ -145,6 +145,17 @@ class App < Sinatra::Base
                         body_class: "page"}
   end
 
+  get '/admin/locations' do 
+    protected!
+    erb :admin_locations, locals:{title:  "Admin Locations",
+                                  body_class:  "page"}
+  end
+
+  # get '/admin/locations/:id/edit' do |id|
+  #   location = LocationStore.find(id.to_i, params[:location])
+  #   erb :edit, locals:{idea: idea}
+  # end
+
   def protected!
     return if authorized?
     headers['WWW-Authenticate'] = 'Basic realm="Restricted area"'
