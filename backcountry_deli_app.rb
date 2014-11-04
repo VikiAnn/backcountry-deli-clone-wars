@@ -22,6 +22,24 @@ class BackCountryApp < Sinatra::Base
                             body_class: "page page-id-6 page-template-default"}
   end
 
+  get '/order_glenarm_denver' do 
+    erb :order_glenarm_denver, locals:{page_name:  :order_glenarm_denver,
+                                       title:  "Order Online - Denver 17th & Glenarm - Backcountry Delicatesse",
+                                       body_class:  "page page-id-643 page-template page-template-page-home-php"}
+  end
+
+  get '/customer_policies' do
+    erb :customer_policies, locals:{page_name:  :customer_policies,
+                                    title:  "Backcountry Policies - Backcountry Delicatessen",
+                                    body_class:  "page page-id-436 page-template-default"}
+  end
+
+  get '/order_fort_collins' do 
+    erb :order_fort_collins, locals:{page_name:  :order_fort_collins,
+                                     title: "Order Online – Fort Collins - Backcountry Delicatessen",
+                                     body_class:  "page page-id-530 page-child parent-pageid-131 page-template page-template-page-home-php" }
+  end
+
   get '/social' do
     erb :social, locals:{page_name: :social,
                          title: "Social Love - Backcountry Delicatessen",
@@ -49,9 +67,15 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/hot_breakfast_sandwiches' do
+<<<<<<< HEAD
     erb :hot_breakfast_sandwiches, locals:{page_name: :breakfast,
                                            title: "Hot Breakfast Sandwiches",
                                            body_class: "page page-id-51 page-child parent-pageid-9 page-template page-template-page-menu-php"}
+=======
+    erb :hot_breakfast_sandwiches, locals:{page_name: :hot_breakfast_sandwiches,
+                                           title:  "Hot Breakfast Sandwiches - Backcountry Delicatessen",
+                                           body_class:  "page page-id-51 page-child parent-pageid-9 page-template page-template-page-menu-php"}
+>>>>>>> adam-layout-clean
   end
 
   get '/build_your_own' do
