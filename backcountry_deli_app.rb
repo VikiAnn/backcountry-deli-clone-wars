@@ -16,6 +16,12 @@ class BackCountryApp < Sinatra::Base
                                     body_class:  "page page-id-436 page-template-default"}
   end
 
+  get '/order_steamboat' do 
+    erb :order_steamboat, locals:{page_name:  :order_steamboat,
+                                  title:  "Order Online – Steamboat Springs - Backcountry Delicatessen",
+                                  body_class:  "page page-id-541 page-child parent-pageid-131 page-template page-template-page-home-php"}
+  end
+
   get '/order_jackson' do 
     erb :order_jackson, locals:{page_name:  :order_jackson,
                                 title:  "Order Online – Jackson Hole - Backcountry Delicatessen",
