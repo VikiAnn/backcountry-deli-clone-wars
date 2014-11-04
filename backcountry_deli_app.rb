@@ -1,6 +1,7 @@
 require 'bundler'
 Bundler.require
 
+
 class BackCountryApp < Sinatra::Base
   get '/' do
     erb :index, locals:{page_name: :index,
@@ -9,10 +10,40 @@ class BackCountryApp < Sinatra::Base
   end
   # home page page-id-2 page-template page-template-page-home-php
 
+  get '/customer_policies' do 
+    erb :customer_policies, locals:{page_name:  :customer_policies,
+                                    title:  "Backcountry Policies - Backcountry Delicatessen",
+                                    body_class:  "page page-id-436 page-template-default"}
+  end
+
+  get '/order_jackson' do 
+    erb :order_jackson, locals:{page_name:  :order_jackson,
+                                title:  "Order Online – Jackson Hole - Backcountry Delicatessen",
+                                body_class:  "page page-id-538 page-child parent-pageid-131 page-template page-template-page-home-php"}
+  end
+
   get '/our_story' do
     erb :our_story, locals:{page_name: :our_story,
                             title: "Our Story - Backcountry Delicatessen",
                             body_class: "page page-id-6 page-template-default"}
+  end
+
+  get '/order_glenarm_denver' do 
+    erb :order_glenarm_denver, locals:{page_name:  :order_glenarm_denver,
+                                       title:  "Order Online - Denver 17th & Glenarm - Backcountry Delicatesse",
+                                       body_class:  "page page-id-643 page-template page-template-page-home-php"}
+  end
+
+  get '/customer_policies' do
+    erb :customer_policies, locals:{page_name:  :customer_policies,
+                                    title:  "Backcountry Policies - Backcountry Delicatessen",
+                                    body_class:  "page page-id-436 page-template-default"}
+  end
+
+  get '/order_fort_collins' do 
+    erb :order_fort_collins, locals:{page_name:  :order_fort_collins,
+                                     title: "Order Online – Fort Collins - Backcountry Delicatessen",
+                                     body_class:  "page page-id-530 page-child parent-pageid-131 page-template page-template-page-home-php" }
   end
 
   get '/social' do
@@ -74,7 +105,9 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/location_denver_lodo_co' do
-    erb :location_denver_lodo_co
+    erb :location_denver_lodo_co, locals:{page_name:  :location_denver_lodo_co,
+                                          title:  "Denver, CO - Backcountry Delicatessen",
+                                          body_class:  "page page-id-17 page-child parent-pageid-10 page-template page-template-page-location-php"}
   end
 
   get '/location_denver_downtown_co' do
@@ -84,7 +117,10 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/location_fort_collins_co' do
-    erb :location_fort_collins_co
+    erb :location_fort_collins_co, locals:{page_name: :location_fort_collins_co,
+                                           title: "Fort Collins, CO - Backcountry Delicatessen",
+                                           body_class: "page page-id-15 page-child parent-pageid-10 page-template page-template-page-location-php"
+                                           }
   end
 
   get '/location_jackson_hole_wy' do
