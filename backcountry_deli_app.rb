@@ -29,7 +29,10 @@ class BackCountryApp < Sinatra::Base
   end
 
   get '/contact_us' do
-    erb :contact_us
+    erb :contact_us, locals:{page_name: :contact_us,
+                            title: "Contact Us - Backcountry Delicatessen",
+                            body_class: "page page-id-8 page-template-default"
+                            }
   end
 
   get '/specialty_sandwiches' do
