@@ -1,4 +1,4 @@
-require './backcountry_deli_app'
+require './app'
 require 'bundler'
 Bundler.require
 
