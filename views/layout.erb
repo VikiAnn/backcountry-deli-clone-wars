@@ -15,7 +15,9 @@
     Mobile_redirect("http://m.backcountry-deli.com", true);
   </script>
 
-  <title><%= title %></title>
+  <title>
+    <%=t itle %>
+  </title>
 
   <!-- Google Chrome Frame for IE -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -303,139 +305,174 @@
     </header>
     <!-- end header -->
     <div id="content">
-      <%= yield %>
+      <%=y ield %>
     </div>
-  <footer class="footer" role="contentinfo">
+    <footer class="footer" role="contentinfo">
 
-    <div id="inner-footer" class="wrap clearfix">
+      <div id="inner-footer" class="wrap clearfix">
 
-      <div id="footer_buttons">
+        <div id="footer_buttons">
 
-        <div class="facebook-foot">
-          <a href="http://facebook.com/backcountrydeli"><img src="wp-content/themes/bones/library/images/facebook.png" alt="facebook" width="38" height="38" />
-          </a>
+          <div class="facebook-foot">
+            <a href="http://facebook.com/backcountrydeli"><img src="wp-content/themes/bones/library/images/facebook.png" alt="facebook" width="38" height="38" />
+            </a>
+          </div>
+          <!-- facebook-foot -->
+          <div class="mail-foot">
+            <a href="contact.1"><img src="wp-content/themes/bones/library/images/email.png" alt="email" width="38" height="38" />
+            </a>
+          </div>
+          <!-- mail-foot -->
+
         </div>
-        <!-- facebook-foot -->
-        <div class="mail-foot">
-          <a href="contact.1"><img src="wp-content/themes/bones/library/images/email.png" alt="email" width="38" height="38" />
-          </a>
+        <!-- footer_buttons -->
+
+
+        <div id="black-studio-tinymce-7" class="footer-containers widget_black_studio_tinymce">
+          <div class="textwidget">
+            <h2><a title="Denver, CO" href="/location_denver_lodo_co"><%= locations.first[:location_name] %></a></h2>
+            <div class="clearfix"> </div>
+            <p>
+              <%=l ocations.first[:hours1] %>
+                </br>
+                <%=l ocations.first[:hours2] %>
+            </p>
+            <p>
+              <%=l ocations.first[:area] %>
+                </br>
+                <%=l ocations.first[:address] %>
+                  </br>
+                  <%=l ocations.first[:city_state_zip] %>
+                    </br>
+                    <%=l ocations.first[:phone] %>
+                      </br>
+            </p>
+            <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdlodo" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
+              </a>
+              </strong>
+              </span>
+              <a href="https://twitter.com/bcdlodo" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
+              </a>
+            </p>
+            <br/>
+            <p>
+              <%=l ocations[1][:area] %>
+                </br>
+                <%=l ocations[1][:address] %>
+                  </br>
+                  <%=l ocations[1][:city_state_zip] %>
+                    </br>
+                    <%=l ocations[1][:phone] %>
+                      </br>
+            </p>
+            <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdglenarm" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
+              </a>
+              </strong>
+              </span>
+              <a href="https://twitter.com/bcdglenarm" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
+              </a>
+            </p>
+          </div>
         </div>
-        <!-- mail-foot -->
+        <div id="black-studio-tinymce-8" class="footer-containers widget_black_studio_tinymce">
+          <div class="textwidget">
+            <h2><a title="Fort Collins, CO" href="/location_fort_collins_co"><%= locations[2][:location_name] %></a></h2>
+            <div class="clearfix"> </div>
+            <p>
+              <%=l ocations[2][:hours1] %>
+            </p>
+            <p>
+              <%=l ocations[2][:area] %>
+                </br>
+                <%=l ocations[2][:address] %>
+                  </br>
+                  <%=l ocations[2][:city_state_zip] %>
+            </p>
+            <p>
+              <%=l ocations[2][:phone] %>
+            </p>
+            <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDfortcollins" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
+              </a>
+              </strong>
+              </span>
+              <a href="https://twitter.com/BCDfortcollins" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <div id="black-studio-tinymce-9" class="footer-containers widget_black_studio_tinymce">
+          <div class="textwidget">
+            <h2><a title="Jackson Hole, WY" href="/location_jackson_hole_wy"><%= locations[3][:location_name] %></a></h2>
+            <div class="clearfix"> </div>
+            <p>
+              <%=l ocations[3][:hours1] %>
+            </p>
+            <p>
+              <%=l ocations[3][:area] %>
+                <br />
+                <%=l ocations[3][:address] %>
+                  <br />
+                  <%=l ocations[3][:city_state_zip] %>
+            </p>
+            <p>
+              <%=l ocations[3][:phone] %>
+            </p>
+            <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDjackson" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
+              </a>
+              </strong>
+              </span>
+              <a href="https://twitter.com/BCDjackson" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <div id="black-studio-tinymce-10" class="footer-containers widget_black_studio_tinymce">
+          <div class="textwidget">
+            <h2><a title="Steamboat Springs, CO" href="/location_steamboat_springs_co"><%= locations[4][:location_name] %></a></h2>
+            <div class="clearfix"> </div>
+            <p>
+              <%=l ocations[4][:hours1] %>
+            </p>
+            <p>
+              <%=l ocations[4][:area] %>
+                <br />
+                <%=l ocations[4][:address] %>
+                  <br />
+                  <%=l ocations[4][:city_state_zip] %>
+            </p>
+            <p>
+              <%=l ocations[4][:phone] %>
+            </p>
+            <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
+              </a>
+              </strong>
+              </span>
+              <a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
+              </a>
+            </p>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <p style="line-height: 1em;"><span style="color: #333333; font-size:80%;">Branding &amp; Website by </span><a style="color: #333333; font-size:80%;" href="http://www.onetribecreative.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.onetribecreative.com']);"
+              target="_blank">One Tribe Creative</a>
+              </span>
+            </p>
+          </div>
+        </div>
+
 
       </div>
-      <!-- footer_buttons -->
+      <!-- end #inner-footer -->
 
-
-      <div id="black-studio-tinymce-7" class="footer-containers widget_black_studio_tinymce">
-        <div class="textwidget">
-          <h2><a title="Denver, CO" href="/location_denver_lodo_co"><%= locations.first[:location_name] %></a></h2>
-          <div class="clearfix"> </div>
-          <p><%= locations.first[:hours1] %>
-          </br><%= locations.first[:hours2] %></p>
-          <p><%= locations.first[:area] %>
-          </br><%= locations.first[:address] %>
-          </br><%= locations.first[:city_state_zip] %>
-          </br><%= locations.first[:phone] %>
-          </br>
-          </p>
-          <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdlodo" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
-            </a>
-            </strong>
-            </span>
-            <a href="https://twitter.com/bcdlodo" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
-            </a>
-          </p>
-          <br/>
-          <p><%= locations[1][:area] %>
-            </br><%= locations[1][:address] %>
-            </br><%= locations[1][:city_state_zip] %>
-          </br><%= locations[1][:phone] %>
-            </br>
-          </p>
-          <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdglenarm" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
-            </a>
-            </strong>
-            </span>
-            <a href="https://twitter.com/bcdglenarm" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
-            </a>
-          </p>
-        </div>
-      </div>
-      <div id="black-studio-tinymce-8" class="footer-containers widget_black_studio_tinymce">
-        <div class="textwidget">
-          <h2><a title="Fort Collins, CO" href="/location_fort_collins_co"><%= locations[2][:location_name] %></a></h2>
-          <div class="clearfix"> </div>
-          <p><%= locations[2][:hours1] %></p>
-          <p><%= locations[2][:area] %>
-          </br><%= locations[2][:address] %>
-          </br><%= locations[2][:city_state_zip] %></p>
-          <p><%= locations[2][:phone] %></p>
-          <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDfortcollins" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
-            </a>
-            </strong>
-            </span>
-            <a href="https://twitter.com/BCDfortcollins" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
-            </a>
-          </p>
-        </div>
-      </div>
-      <div id="black-studio-tinymce-9" class="footer-containers widget_black_studio_tinymce">
-        <div class="textwidget">
-          <h2><a title="Jackson Hole, WY" href="/location_jackson_hole_wy"><%= locations[3][:location_name] %></a></h2>
-          <div class="clearfix"> </div>
-          <p><%= locations[3][:hours1] %></p>
-          <p><%= locations[3][:area] %>
-            <br /><%= locations[3][:address] %>
-            <br /><%= locations[3][:city_state_zip] %></p>
-          <p><%= locations[3][:phone] %></p>
-          <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDjackson" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
-            </a>
-            </strong>
-            </span>
-            <a href="https://twitter.com/BCDjackson" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
-            </a>
-          </p>
-        </div>
-      </div>
-      <div id="black-studio-tinymce-10" class="footer-containers widget_black_studio_tinymce">
-        <div class="textwidget">
-          <h2><a title="Steamboat Springs, CO" href="/location_steamboat_springs_co"><%= locations[4][:location_name] %></a></h2>
-          <div class="clearfix"> </div>
-          <p><%= locations[4][:hours1] %></p>
-          <p><%= locations[4][:area] %>
-            <br /><%= locations[4][:address] %>
-            <br /><%= locations[4][:city_state_zip] %></p>
-          <p><%= locations[4][:phone] %></p>
-          <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
-            </a>
-            </strong>
-            </span>
-            <a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
-            </a>
-          </p>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <p style="line-height: 1em;"><span style="color: #333333; font-size:80%;">Branding &amp; Website by </span><a style="color: #333333; font-size:80%;" href="http://www.onetribecreative.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.onetribecreative.com']);"
-            target="_blank">One Tribe Creative</a>
-            </span>
-          </p>
-        </div>
-      </div>
-
-
-    </div>
-    <!-- end #inner-footer -->
-
-  </footer>
-  <!-- end footer -->
+    </footer>
+    <!-- end footer -->
 
   </div>
   <!-- end #container -->
 
   <!-- all js scripts are loaded in library/bones.php -->
-  <% if defined? page_name && page_name == :index %>
+  <% if defined? page_name && page_name==: index %>
     <script type="text/javascript">
       var addthis_config = {
         "data_track_clickback": false,
@@ -451,9 +488,9 @@
     <script type='text/javascript' src='wp-content/themes/bones/library/js/scripts.js'></script>
     <script type='text/javascript' src='wp-content/plugins/ml-slider/assets/sliders/flexslider/jquery.flexslider-min.js'></script>
     <% else %>
-      <%= erb :_javascripts %>
-    <% end %>
-  <!--wp_footer-->
+      <%=e rb :_javascripts %>
+        <% end %>
+          <!--wp_footer-->
 </body>
 
 </html>

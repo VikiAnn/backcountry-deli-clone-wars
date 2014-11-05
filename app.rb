@@ -208,16 +208,18 @@ class App < Sinatra::Base
                         locations: location_array}
   end
 
-  get '/admin/locations' do 
+  get '/admin/locations' do
     protected!
     erb :admin_locations, locals:{title:  "Admin Locations",
-                                  body_class:  "page"}
+                                  body_class:  "page page-template",
+                                  locations: location_array}
   end
 
-  get '/admin/locations/edit' do 
+  get '/admin/locations/edit' do
     protected!
     erb :location_edit, locals:{title:  "Edit Locations",
-                                body_class:  "page"}  
+                                body_class:  "page",
+                                locations: location_array}
   end
 
   def protected!
