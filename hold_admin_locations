@@ -1,0 +1,15 @@
+  <ul>
+      <% locations.each do |location| %>
+        <li>
+          </form>
+          <p>Title:  <%= location.title %></p>
+          <p>Address:  <%= location.address %></p>
+          <p>Hours:  <%= location.hours %><br /></p>
+          <a href="admin/locations/<%= location.id %>/location_edit">Edit</a>
+          <form action='/<%= location.id %>' method='POST'>
+            <input type="hidden" name="_method" value="DELETE">
+            <input type='submit' value="delete"/>
+          </form>
+        </li>
+      <% end %>
+    </ul>

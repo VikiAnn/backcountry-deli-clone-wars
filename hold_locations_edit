@@ -1,0 +1,24 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+
+    <form action='/<%= idea.id %>' method='POST'>
+      <p>
+        <% if location.id %>
+          Edit your Idea:
+        <% else %>
+          Your Idea:
+        <% end %>
+      </p>
+      <% if location.id %>
+        <input type="hidden" name="_method" value="PUT" />
+      <% end %>
+      <p>Title:  <input type='text' name='location[title]' value="<%= location.title %>"/></p>
+      <p>Address:  <input type='text' name='location[address]' value='<%= location.address %>' /></p>
+      <p>Hours:  <textarea name='location[hours]'><%= location.hours %></textarea></p>
+      <input type='submit'/>
+    </form>
+  </body>
+</html>

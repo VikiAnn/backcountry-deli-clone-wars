@@ -151,10 +151,11 @@ class App < Sinatra::Base
                                   body_class:  "page"}
   end
 
-  # get '/admin/locations/:id/edit' do |id|
-  #   location = LocationStore.find(id.to_i, params[:location])
-  #   erb :edit, locals:{idea: idea}
-  # end
+  get '/admin/locations/edit' do 
+    protected!
+    erb :location_edit, locals:{title:  "Edit Locations",
+                                body_class:  "page"}  
+  end
 
   def protected!
     return if authorized?
