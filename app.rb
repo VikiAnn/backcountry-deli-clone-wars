@@ -4,7 +4,24 @@ Bundler.require
 
 class App < Sinatra::Base
 
-  DB = ::Sequel.connect('postgres://localhost/backcountry')
+# DB = Sequel.postgres('database_name', :user=>'user',
+#        :password=>'password', :host=>'host', :port=>5432,
+#        :max_connections=>10)
+
+  configure :development do
+    DB = ::Sequel.connect('postgres://localhost/backcountry')
+    # DB = Sequel.postgres('backcountry', :user=>'', :password=>'', :host=>'localhost', :port=>5432, :max_connections=>10)
+  end
+
+  configure :production do
+    DB = Sequel.postgres('d3dg2onoq74mmq',
+                          :user=>'yljtxxrjrldvjl',
+                          :password=>'jmjzephcAK-815WjqAsC7fRLXt',
+                          :host=>ENV["DATABASE_URL"],
+                          :port=>5432,
+                          :max_connections=>10)
+  end
+
 
 
   location_array = [
@@ -55,7 +72,7 @@ class App < Sinatra::Base
     erb :index, locals:{page_name: :index,
                         title: "Home - Backcountry Delicatessen",
                         body_class: "home page-id-2",
-                        locations: location_array}
+                        locations: DB[:locations].all}
   end
 
   get '/customer_policies' do
