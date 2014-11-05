@@ -9,7 +9,8 @@ class App < Sinatra::Base
 #        :max_connections=>10)
 
   configure :development do
-    @location_store = LocationStore.new('postgres://localhost/backcountry')
+    DB = LocationStore.new('postgres://localhost/backcountry')
+    # @location_store.database('postgres://localhost/backcountry')
     # DB = Sequel.connect('postgres://localhost/backcountry')
   end
 
@@ -21,7 +22,7 @@ class App < Sinatra::Base
     erb :index, locals:{page_name: :index,
                         title: "Home - Backcountry Delicatessen",
                         body_class: "home page-id-2",
-                        locations: @location_store.all}
+                        locations: DB.all}
   end
 
   get '/customer_policies' do
@@ -193,7 +194,7 @@ class App < Sinatra::Base
     protected!
     erb :location_edit, locals:{title:  "Edit Locations",
                                 body_class:  "page",
-                                locations: DB[:locations].all}
+                                locations: DB.all}
   end
 
   def protected!

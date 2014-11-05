@@ -1,11 +1,14 @@
-class LocationStore
+require_relative 'location'
 
+class LocationStore
   def initialize(database)
     @database ||= Sequel.connect(database)
-    @database[:locations]
+    @database
   end
 
   def all
-    @database.all
+    @database[:locations].map do |data|
+      Location.new(data)
+    end
   end
 end
