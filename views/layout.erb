@@ -328,15 +328,15 @@
 
       <div id="black-studio-tinymce-7" class="footer-containers widget_black_studio_tinymce">
         <div class="textwidget">
-          <h2><a title="Denver, CO" href="/location_denver_lodo_co">Denver, CO</a></h2>
+          <h2><a title="Denver, CO" href="/location_denver_lodo_co"><%= locations.first[:location_name] %></a></h2>
           <div class="clearfix"> </div>
-          <p>Mon - Fri 7 am - 6 pm
-            <br />Sat - Sun 8 am - 6 pm</p>
-          <p>LoDo
-            <br />1617 Wazee St
-            <br />Denver, CO 80202
-            <br/>303-534-7900
-            <br/>
+          <p><%= locations.first[:hours1] %>
+          </br><%= locations.first[:hours2] %></p>
+          <p><%= locations.first[:area] %>
+          </br><%= locations.first[:address] %>
+          </br><%= locations.first[:city_state_zip] %>
+          </br><%= locations.first[:phone] %>
+          </br>
           </p>
           <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdlodo" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
             </a>
@@ -346,11 +346,11 @@
             </a>
           </p>
           <br/>
-          <p>Downtown
-            <br />444 17th St, Downtown
-            <br />Denver, CO 80202
-            <br/>303-534-2100
-            <br/>
+          <p><%= locations[1][:area] %>
+            </br><%= locations[1][:address] %>
+            </br><%= locations[1][:city_state_zip] %>
+          </br><%= locations[1][:phone] %>
+            </br>
           </p>
           <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdglenarm" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
             </a>
@@ -363,13 +363,13 @@
       </div>
       <div id="black-studio-tinymce-8" class="footer-containers widget_black_studio_tinymce">
         <div class="textwidget">
-          <h2><a title="Fort Collins, CO" href="/location_fort_collins_co">Fort Collins, CO</a></h2>
+          <h2><a title="Fort Collins, CO" href="/location_fort_collins_co"><%= locations[2][:location_name] %></a></h2>
           <div class="clearfix"> </div>
-          <p>Mon - Sun 7 am - 5 pm</p>
-          <p>Old Town
-            <br />140 N College Ave
-            <br />Fort Collins, CO 80524</p>
-          <p>970-482-6913</p>
+          <p><%= locations[2][:hours1] %></p>
+          <p><%= locations[2][:area] %>
+          </br><%= locations[2][:address] %>
+          </br><%= locations[2][:city_state_zip] %></p>
+          <p><%= locations[2][:phone] %></p>
           <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDfortcollins" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
             </a>
             </strong>
@@ -381,13 +381,13 @@
       </div>
       <div id="black-studio-tinymce-9" class="footer-containers widget_black_studio_tinymce">
         <div class="textwidget">
-          <h2><a title="Jackson Hole, WY" href="/location_jackson_hole_wy">Jackson Hole, WY</a></h2>
+          <h2><a title="Jackson Hole, WY" href="/location_jackson_hole_wy"><%= locations[3][:location_name] %></a></h2>
           <div class="clearfix"> </div>
-          <p>Mon - Sun 7 am - 5 pm</p>
-          <p>Town Square
-            <br />50 W Deloney Ave
-            <br />Jackson, WY 83001</p>
-          <p>307-734-9420</p>
+          <p><%= locations[3][:hours1] %></p>
+          <p><%= locations[3][:area] %>
+            <br /><%= locations[3][:address] %>
+            <br /><%= locations[3][:city_state_zip] %></p>
+          <p><%= locations[3][:phone] %></p>
           <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDjackson" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
             </a>
             </strong>
@@ -399,13 +399,13 @@
       </div>
       <div id="black-studio-tinymce-10" class="footer-containers widget_black_studio_tinymce">
         <div class="textwidget">
-          <h2><a title="Steamboat Springs, CO" href="/location_steamboat_springs_co">Steamboat Springs, CO</a></h2>
+          <h2><a title="Steamboat Springs, CO" href="/location_steamboat_springs_co"><%= locations[4][:location_name] %></a></h2>
           <div class="clearfix"> </div>
-          <p>Mon - Sun 7 am - 5 pm</p>
-          <p>Old Town Square, Downtown
-            <br />635 Lincoln Avenue
-            <br />Steamboat Springs, CO 80487</p>
-          <p>970-879-3617</p>
+          <p><%= locations[4][:hours1] %></p>
+          <p><%= locations[4][:area] %>
+            <br /><%= locations[4][:address] %>
+            <br /><%= locations[4][:city_state_zip] %></p>
+          <p><%= locations[4][:phone] %></p>
           <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
             </a>
             </strong>
