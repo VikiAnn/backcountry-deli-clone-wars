@@ -16,7 +16,7 @@
   </script>
 
   <title>
-    <%=t itle %>
+    <%= title %>
   </title>
 
   <!-- Google Chrome Frame for IE -->
@@ -305,7 +305,7 @@
     </header>
     <!-- end header -->
     <div id="content">
-      <%=y ield %>
+      <%= yield %>
     </div>
     <footer class="footer" role="contentinfo">
 
@@ -333,18 +333,18 @@
             <h2><a title="Denver, CO" href="/location_denver_lodo_co"><%= locations.first[:location_name] %></a></h2>
             <div class="clearfix"> </div>
             <p>
-              <%=l ocations.first[:hours1] %>
+              <%= locations.first[:hours1] %>
                 </br>
-                <%=l ocations.first[:hours2] %>
+                <%= locations.first[:hours2] %>
             </p>
             <p>
-              <%=l ocations.first[:area] %>
+              <%= locations.first[:area] %>
                 </br>
-                <%=l ocations.first[:address] %>
+                <%= locations.first[:address] %>
                   </br>
-                  <%=l ocations.first[:city_state_zip] %>
+                  <%= locations.first[:city_state_zip] %>
                     </br>
-                    <%=l ocations.first[:phone] %>
+                    <%= locations.first[:phone] %>
                       </br>
             </p>
             <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdlodo" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
@@ -356,13 +356,13 @@
             </p>
             <br/>
             <p>
-              <%=l ocations[1][:area] %>
+              <%= locations[1][:area] %>
                 </br>
-                <%=l ocations[1][:address] %>
+                <%= locations[1][:address] %>
                   </br>
-                  <%=l ocations[1][:city_state_zip] %>
+                  <%= locations[1][:city_state_zip] %>
                     </br>
-                    <%=l ocations[1][:phone] %>
+                    <%= locations[1][:phone] %>
                       </br>
             </p>
             <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdglenarm" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
@@ -379,17 +379,17 @@
             <h2><a title="Fort Collins, CO" href="/location_fort_collins_co"><%= locations[2][:location_name] %></a></h2>
             <div class="clearfix"> </div>
             <p>
-              <%=l ocations[2][:hours1] %>
+              <%= locations[2][:hours1] %>
             </p>
             <p>
-              <%=l ocations[2][:area] %>
+              <%= locations[2][:area] %>
                 </br>
-                <%=l ocations[2][:address] %>
+                <%= locations[2][:address] %>
                   </br>
-                  <%=l ocations[2][:city_state_zip] %>
+                  <%= locations[2][:city_state_zip] %>
             </p>
             <p>
-              <%=l ocations[2][:phone] %>
+              <%= locations[2][:phone] %>
             </p>
             <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDfortcollins" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
               </a>
@@ -405,17 +405,17 @@
             <h2><a title="Jackson Hole, WY" href="/location_jackson_hole_wy"><%= locations[3][:location_name] %></a></h2>
             <div class="clearfix"> </div>
             <p>
-              <%=l ocations[3][:hours1] %>
+              <%= locations[3][:hours1] %>
             </p>
             <p>
-              <%=l ocations[3][:area] %>
+              <%= locations[3][:area] %>
                 <br />
-                <%=l ocations[3][:address] %>
+                <%= locations[3][:address] %>
                   <br />
-                  <%=l ocations[3][:city_state_zip] %>
+                  <%= locations[3][:city_state_zip] %>
             </p>
             <p>
-              <%=l ocations[3][:phone] %>
+              <%= locations[3][:phone] %>
             </p>
             <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDjackson" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
               </a>
@@ -431,17 +431,17 @@
             <h2><a title="Steamboat Springs, CO" href="/location_steamboat_springs_co"><%= locations[4][:location_name] %></a></h2>
             <div class="clearfix"> </div>
             <p>
-              <%=l ocations[4][:hours1] %>
+              <%= locations[4][:hours1] %>
             </p>
             <p>
-              <%=l ocations[4][:area] %>
+              <%= locations[4][:area] %>
                 <br />
-                <%=l ocations[4][:address] %>
+                <%= locations[4][:address] %>
                   <br />
-                  <%=l ocations[4][:city_state_zip] %>
+                  <%= locations[4][:city_state_zip] %>
             </p>
             <p>
-              <%=l ocations[4][:phone] %>
+              <%= locations[4][:phone] %>
             </p>
             <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
               </a>
@@ -472,7 +472,7 @@
   <!-- end #container -->
 
   <!-- all js scripts are loaded in library/bones.php -->
-  <% if defined? page_name && page_name==: index %>
+  <% if defined? page_name && page_name== :index %>
     <script type="text/javascript">
       var addthis_config = {
         "data_track_clickback": false,
@@ -488,7 +488,7 @@
     <script type='text/javascript' src='wp-content/themes/bones/library/js/scripts.js'></script>
     <script type='text/javascript' src='wp-content/plugins/ml-slider/assets/sliders/flexslider/jquery.flexslider-min.js'></script>
     <% else %>
-      <%=e rb :_javascripts %>
+      <%= erb :_javascripts %>
         <% end %>
           <!--wp_footer-->
 </body>
