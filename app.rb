@@ -227,13 +227,14 @@ class App < Sinatra::Base
   get '/admin/locations' do
     protected!
     erb :admin_locations, locals:{title:  "Admin Locations",
-                                  body_class:  "page"}
+                                  body_class:  "page",
+                                  locations: DB[:locations].all}
   end
 
   get '/admin/locations/edit' do
     protected!
     erb :location_edit, locals:{title:  "Edit Locations",
-                                body_class:  "page"
+                                body_class:  "page",
                                 locations: DB[:locations].all}
   end
 
