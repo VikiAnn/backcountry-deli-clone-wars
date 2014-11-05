@@ -1,19 +1,28 @@
-<h1>Location Edit</h1>
-
 <html>
   <head>
-    
+    <title>Location Edit</title>
   </head>
   <body>
+    <h1>Backcountry Deli Locations</h1>
 
-    <method='POST'>
+    <form action='/<%= location.id %>' method='POST'>
       <p>
-          Edit Location Information:
+        <% if location.id %>
+          Edit your Idea:
+        <% else %>
+          New Location:
+        <% end %>
       </p>
+      <% if location.id %>
         <input type="hidden" name="_method" value="PUT" />
-      <p>Title:  <input type='text' /></p>
-      <p>Address:  <input type='text' /></p>
-      <p>Hours:  <input type='text'></p>
+      <% end %>
+      <p>Name:  <input type='text' name='location[name]' value="<%= location.name %>"/></p>
+      <p>Hours1:  <input type='text' name='location[hours1]' value='<%= location.hours1 %>' /></p>
+      <p>Hours2:  <input type='text' name='location[hours2]'><%= location.hours2 %></p>
+      <p>Area:  <input type='text' name='location[area]'><%= location.area %></p>
+      <p>Address:  <input type='text' name='location[address]'><%= location.address %></p>
+      <p>City_State_Zip:  <input type='text' name='location[city_state_zip]'><%= location.city_state_zip %></p>
+      <p>Phone:  <input type='text' name='location[phone]'><%= location.phone %></p>
       <input type='submit'/>
     </form>
   </body>
