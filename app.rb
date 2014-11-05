@@ -9,7 +9,6 @@ class App < Sinatra::Base
 
   configure :development do
     DB = Sequel.connect('postgres://localhost/backcountry')
-    # DB = Sequel.postgres('backcountry', :user=>'', :password=>'', :host=>'localhost', :port=>5432, :max_connections=>10)
   end
 
   configure :production do
