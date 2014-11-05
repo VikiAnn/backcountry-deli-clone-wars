@@ -1,3 +1,4 @@
+require './lib/location_store'
 require 'bundler'
 Bundler.require
 
@@ -8,62 +9,20 @@ class App < Sinatra::Base
 #        :max_connections=>10)
 
   configure :development do
-    DB = Sequel.connect('postgres://localhost/backcountry')
+    DB = LocationStore.new('postgres://localhost/backcountry')
+    # @location_store.database('postgres://localhost/backcountry')
+    # DB = Sequel.connect('postgres://localhost/backcountry')
   end
 
   configure :production do
     DB = Sequel.connect(ENV["DATABASE_URL"])
   end
 
-  location_array= [
-    {
-      name: "Denver, CO",
-      hours1: "Mon - Fri 7 am - 6 pm",
-      hours2: "Sat - Sun 8 am - 6 pm",
-      area: "LoDo",
-      address: "1617 Wazee St",
-      city_state_zip: "Denver, CO 80202",
-      phone: "303-534-7900"
-    },
-    {
-      name: "Denver Downtown",
-      hours1: "Mon - Fri 7 am - 6 pm",
-      hours2: "Sat - Sun 8 am - 6 pm",
-      area: "Downtown",
-      address: "444 17th St, Downtown",
-      city_state_zip: "Denver, CO 80202",
-      phone: "303-534-2100"
-    },
-    {
-      name: "Fort Collins, CO",
-      hours1: "Mon - Sun 7 am - 5 pm",
-      area: "Old Town",
-      address: "140 N College Ave",
-      city_state_zip: "Fort Collins, CO 80524",
-      phone: "970-482-6913"
-    },
-    {
-      name: "Jackson Hole, WY",
-      hours1: "Mon - Sun 7 am - 5 pm",
-      area: "Town Square",
-      address: "50 W Deloney Ave",
-      city_state_zip: "Jackson, WY 83001",
-      phone: "307-734-9420"
-    },
-    {
-      name: "Steamboat Springs, CO",
-      hours1: "Mon - Sun 7 am - 5 pm",
-      area: "Old Town Square, Downtown",
-      address: "635 Lincoln Avenue",
-      city_state_zip: "Steamboat Springs, CO 80487",
-      phone: "970-879-3617"
-    }
-  ]
   get '/' do
     erb :index, locals:{page_name: :index,
                         title: "Home - Backcountry Delicatessen",
                         body_class: "home page-id-2",
-                        locations: DB[:locations].all}
+                        locations: DB.all}
   end
 
   get '/customer_policies' do
@@ -235,7 +194,7 @@ class App < Sinatra::Base
     protected!
     erb :location_edit, locals:{title:  "Edit Locations",
                                 body_class:  "page",
-                                locations: DB[:locations].all}
+                                locations: DB.all}
   end
 
   def protected!

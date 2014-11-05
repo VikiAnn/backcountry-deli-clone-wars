@@ -310,128 +310,34 @@
         <!-- footer_buttons -->
 
 
+        <% locations.each do |location| %>
         <div id="black-studio-tinymce-7" class="footer-containers widget_black_studio_tinymce">
           <div class="textwidget">
-            <h2><a title="Denver, CO" href="/location_denver_lodo_co"><%= locations.first[:name] %></a></h2>
+            <h2><a title="<%= location %>" href="/location_denver_lodo_co"><%= location.name %></a></h2>
             <div class="clearfix"> </div>
             <p>
-              <%= locations.first[:hours1] %>
+              <%= location.hours1 %>
                 </br>
-                <%= locations.first[:hours2] %>
+                <%= location.hours2 %>
             </p>
             <p>
-              <%= locations.first[:area] %>
+              <%= location.area %>
                 </br>
-                <%= locations.first[:address] %>
+                <%= location.address %>
                   </br>
-                  <%= locations.first[:city_state_zip] %>
+                  <%= location.city_state_zip %>
                     </br>
-                    <%= locations.first[:phone] %>
+                    <%= location.phone %>
                       </br>
             </p>
-            <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdlodo" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
+            <p><span style="color: #000000;"><strong><a href="<%= location.twitter_link %>" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
               </a>
               </strong>
               </span>
-              <a href="https://twitter.com/bcdlodo" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
+              <a href="<%= location.twitter_link %>" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
               </a>
             </p>
-            <br/>
-            <p>
-              <%= locations[1][:area] %>
-                </br>
-                <%= locations[1][:address] %>
-                  </br>
-                  <%= locations[1][:city_state_zip] %>
-                    </br>
-                    <%= locations[1][:phone] %>
-                      </br>
-            </p>
-            <p><span style="color: #000000;"><strong><a href="https://twitter.com/bcdglenarm" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
-              </a>
-              </strong>
-              </span>
-              <a href="https://twitter.com/bcdglenarm" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
-              </a>
-            </p>
-          </div>
-        </div>
-        <div id="black-studio-tinymce-8" class="footer-containers widget_black_studio_tinymce">
-          <div class="textwidget">
-            <h2><a title="Fort Collins, CO" href="/location_fort_collins_co"><%= locations[2][:location_name] %></a></h2>
-            <div class="clearfix"> </div>
-            <p>
-              <%= locations[2][:hours1] %>
-            </p>
-            <p>
-              <%= locations[2][:area] %>
-                </br>
-                <%= locations[2][:address] %>
-                  </br>
-                  <%= locations[2][:city_state_zip] %>
-            </p>
-            <p>
-              <%= locations[2][:phone] %>
-            </p>
-            <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDfortcollins" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
-              </a>
-              </strong>
-              </span>
-              <a href="https://twitter.com/BCDfortcollins" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
-              </a>
-            </p>
-          </div>
-        </div>
-        <div id="black-studio-tinymce-9" class="footer-containers widget_black_studio_tinymce">
-          <div class="textwidget">
-            <h2><a title="Jackson Hole, WY" href="/location_jackson_hole_wy"><%= locations[3][:location_name] %></a></h2>
-            <div class="clearfix"> </div>
-            <p>
-              <%= locations[3][:hours1] %>
-            </p>
-            <p>
-              <%= locations[3][:area] %>
-                <br />
-                <%= locations[3][:address] %>
-                  <br />
-                  <%= locations[3][:city_state_zip] %>
-            </p>
-            <p>
-              <%= locations[3][:phone] %>
-            </p>
-            <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDjackson" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
-              </a>
-              </strong>
-              </span>
-              <a href="https://twitter.com/BCDjackson" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
-              </a>
-            </p>
-          </div>
-        </div>
-        <div id="black-studio-tinymce-10" class="footer-containers widget_black_studio_tinymce">
-          <div class="textwidget">
-            <h2><a title="Steamboat Springs, CO" href="/location_steamboat_springs_co"><%= locations[4][:location_name] %></a></h2>
-            <div class="clearfix"> </div>
-            <p>
-              <%= locations[4][:hours1] %>
-            </p>
-            <p>
-              <%= locations[4][:area] %>
-                <br />
-                <%= locations[4][:address] %>
-                  <br />
-                  <%= locations[4][:city_state_zip] %>
-            </p>
-            <p>
-              <%= locations[4][:phone] %>
-            </p>
-            <p><span style="color: #000000;"><strong><a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><span style="color: #000000;">Daily Specials &gt;</span>
-              </a>
-              </strong>
-              </span>
-              <a href="https://twitter.com/BCDsteamboat" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);" target="_blank"><img alt="foot-twitter" src="wp-content/themes/bones/library/images/foot-twitter.png" width="27" height="26" />
-              </a>
-            </p>
+            <% end %>
             <br/>
             <br/>
             <br/>
