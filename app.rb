@@ -3,9 +3,13 @@ Bundler.require
 
 
 class App < Sinatra::Base
+
+  DB = ::Sequel.connect('postgres://localhost/backcountry')
+
+
   location_array = [
     {
-      location_name: "Denver, CO",
+      name: "Denver, CO",
       hours1: "Mon - Fri 7 am - 6 pm",
       hours2: "Sat - Sun 8 am - 6 pm",
       area: "LoDo",
@@ -14,7 +18,7 @@ class App < Sinatra::Base
       phone: "303-534-7900"
     },
     {
-      location_name: "Denver Downtown",
+      name: "Denver Downtown",
       hours1: "Mon - Fri 7 am - 6 pm",
       hours2: "Sat - Sun 8 am - 6 pm",
       area: "Downtown",
@@ -23,7 +27,7 @@ class App < Sinatra::Base
       phone: "303-534-2100"
     },
     {
-      location_name: "Fort Collins, CO",
+      name: "Fort Collins, CO",
       hours1: "Mon - Sun 7 am - 5 pm",
       area: "Old Town",
       address: "140 N College Ave",
@@ -31,7 +35,7 @@ class App < Sinatra::Base
       phone: "970-482-6913"
     },
     {
-      location_name: "Jackson Hole, WY",
+      name: "Jackson Hole, WY",
       hours1: "Mon - Sun 7 am - 5 pm",
       area: "Town Square",
       address: "50 W Deloney Ave",
@@ -39,7 +43,7 @@ class App < Sinatra::Base
       phone: "307-734-9420"
     },
     {
-      location_name: "Steamboat Springs, CO",
+      name: "Steamboat Springs, CO",
       hours1: "Mon - Sun 7 am - 5 pm",
       area: "Old Town Square, Downtown",
       address: "635 Lincoln Avenue",
@@ -211,15 +215,13 @@ class App < Sinatra::Base
   get '/admin/locations' do
     protected!
     erb :admin_locations, locals:{title:  "Admin Locations",
-                                  body_class:  "page page-template",
-                                  locations: location_array}
+                                  body_class:  "page"}
   end
 
   get '/admin/locations/edit' do
     protected!
     erb :location_edit, locals:{title:  "Edit Locations",
-                                body_class:  "page",
-                                locations: location_array}
+                                body_class:  "page"}
   end
 
   def protected!
