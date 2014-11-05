@@ -1,7 +1,6 @@
 require 'bundler'
 Bundler.require
 
-
 class App < Sinatra::Base
 
 # DB = Sequel.postgres('database_name', :user=>'user',
@@ -9,15 +8,13 @@ class App < Sinatra::Base
 #        :max_connections=>10)
 
   configure :development do
-    DB = ::Sequel.connect('postgres://localhost/backcountry')
+    DB = Sequel.connect('postgres://localhost/backcountry')
     # DB = Sequel.postgres('backcountry', :user=>'', :password=>'', :host=>'localhost', :port=>5432, :max_connections=>10)
   end
 
   configure :production do
     DB = Sequel.connect(ENV["DATABASE_URL"])
   end
-
-
 
   location_array = [
     {
@@ -174,6 +171,10 @@ class App < Sinatra::Base
                                 body_class: "page page-id-299 page-child parent-pageid-9 page-template page-template-page-menu-php",
                                 locations: location_array}
   end
+  #
+  # get '/location_:location_slug' do
+  #   @location = Sequel[:locations].f
+  # end
 
   get '/location_steamboat_springs_co' do
     erb :location_steamboat_springs_co, locals:{page_name: :steamboat,
