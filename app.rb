@@ -14,12 +14,7 @@ class App < Sinatra::Base
   end
 
   configure :production do
-    DB = Sequel.postgres('d3dg2onoq74mmq',
-                          :user=>'yljtxxrjrldvjl',
-                          :password=>'jmjzephcAK-815WjqAsC7fRLXt',
-                          :host=>ENV["DATABASE_URL"],
-                          :port=>5432,
-                          :max_connections=>10)
+    DB = Sequel.connect(ENV["DATABASE_URL"])
   end
 
 
