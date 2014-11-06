@@ -85,7 +85,7 @@ ul.tippy-top-nav li a:hover, ul.tippy-top-nav li.current_page_item > a, ul.tippy
 #nav_wrapper ul.nav li:first-child a {margin-left:0;}
 #nav_wrapper ul.nav li a:hover, #nav_wrapper ul.nav li.current_page_item > a, #nav_wrapper ul.nav li.current_page_parent > a, #nav_wrapper ul.nav li.current_page_ancestor > a {/*color:#000; background:url(/wp-content/themes/bones/library/images/arrow-hover.png) left center no-repeat;*/ text-decoration:underline;}
 #nav_wrapper ul.nav li ul.sub-menu li {width:190px;}
-#nav_wrapper ul.nav li ul.sub-menu li a {padding:9px 0 10px 0; margin-left:0; font-size:21px; font-weight:normal; background:none;}
+#nav_wrapper ul.nav li ul.sub-menu li a {padding:9px 0 10px 0; text-align:left; margin-left:0; font-size:21px; font-weight:normal; background:none;}
 #nav_wrapper ul.nav li ul.sub-menu li a:hover {color:#dd9821; text-decoration:underline;}
 
 nav .footer-nav {}
