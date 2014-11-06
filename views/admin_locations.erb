@@ -12,6 +12,7 @@
     </form>
   </li>
 </ul> -->
+<a href="/admin/locations/new">New</a>
 
 <p>
   <% locations.each do |location| %>
@@ -24,8 +25,8 @@
     <%= location.city_state_zip %><br/>
     <%= location.phone_number %><br/>
     <%= location.twitter_link %><br/>
-    <a href="locations/<%= location.id %>/edit">Edit</a>
-    <form action="/<%= location.id %>" method="POST" style="display: inline">
+    <a href="/admin/locations/<%= location.id %>/edit">Edit</a>
+    <form action="/admin/locations/<%= location.id %>" method="POST" style="display: inline">
       <input name="_method" type="hidden" value="DELETE">
       <input type='submit' value="delete"/>
     </form>
