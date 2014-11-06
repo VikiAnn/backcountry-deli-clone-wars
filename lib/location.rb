@@ -1,5 +1,5 @@
 class Location
-  attr_reader :id, :name, :hours1, :hours2, :area, :address, :city_state_zip, :phone_number, :twitter_link
+  attr_reader :id, :name, :hours1, :hours2, :area, :address, :city_state_zip, :phone_number, :twitter_link, :slug, :description, :map_url
 
   def initialize(data)
     @id = data[:id]
@@ -11,6 +11,9 @@ class Location
     @city_state_zip = data[:city_state_zip]
     @phone_number = data[:phone_number]
     @twitter_link = data[:twitter_link]
+    @slug = data[:slug]
+    @description = data[:description]
+    @map_url = data[:map_url]
   end
 
 
