@@ -10,7 +10,7 @@ class App < Sinatra::Base
   end
 
   configure :production do
-    DB = Sequel.connect(ENV["DATABASE_URL"])
+    DB = LocationStore.new(ENV["DATABASE_URL"])
   end
 
   get '/' do
