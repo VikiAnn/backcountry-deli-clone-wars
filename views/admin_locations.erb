@@ -15,16 +15,20 @@
 
 <p>
   <% locations.each do |location| %>
-    <%= location.id %></br>
-    <%= location.name %></br>
-    <%= location.hours1 %></br>
-    <%= location.hours2 %></br>
-    <%= location.area %></br>
-    <%= location.address %></br>
-    <%= location.city_state_zip %></br>
-    <%= location.phone %></br>
-    <%= location.twitter_link %></br>
-    <a href="locations/<%= location.id %>/edit" %>Edit</a>
-    </br>
+    <%= location.id %><br/>
+    <%= location.name %><br/>
+    <%= location.hours1 %><br/>
+    <%= location.hours2 %><br/>
+    <%= location.area %><br/>
+    <%= location.address %><br/>
+    <%= location.city_state_zip %><br/>
+    <%= location.phone_number %><br/>
+    <%= location.twitter_link %><br/>
+    <a href="locations/<%= location.id %>/edit">Edit</a>
+    <form action="/<%= location.id %>" method="POST" style="display: inline">
+      <input name="_method" type="hidden" value="DELETE">
+      <input type='submit' value="delete"/>
+    </form>
+    <br/>
   <% end %>
 </p>
