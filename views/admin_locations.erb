@@ -2,8 +2,9 @@
 
 <p><a href="/admin/locations/new">New</a></p>
 
-<p>
+
   <% locations.each do |location| %>
+  <p>
     <%= location.id %><br/>
     <%= location.name %><br/>
     <%= location.hours1 %><br/>
@@ -19,5 +20,5 @@
       <input type='submit' value="delete" onclick="return confirm('are you sure?')"/>
     </form>
     <br/>
+  </p>
   <% end %>
-</p>
