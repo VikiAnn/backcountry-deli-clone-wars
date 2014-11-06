@@ -1,0 +1,49 @@
+<div id="image_viewport">
+	<div id="image_container">
+		<img width="2500" height="313" src="wp-content/uploads/2014/08/Denver_location-banner.jpg" class="attachment-full" alt="Denver_location-banner" /> </div>
+</div>
+<!-- the_slideshow -->
+
+<div id="location_content_container">
+	<div id="location_content" class="clearfix">
+		<div class="main-content">
+			<%= location.description %>
+			<p>
+				<iframe style="border: 0;" src="<%= location.map_url %>"
+				width="850" height="350" frameborder="0"></iframe>
+				<br>
+				<small>View <a style="color: #0000ff; text-align: left;" href="<%= location.map_url %>" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://maps.google.com']);">Backcountry Deli &#8211; Jackson Hole</a> in a larger map</small>
+			</p>
+
+
+			<div class="main-bottom-content">
+
+				<div class="map">
+				</div>
+				<!-- map -->
+			</div>
+			<!-- main-bottom-content -->
+
+		</div>
+		<!-- main-content -->
+
+		<div class="main-sidebar">
+			<div id="specials">
+				<div id="specials_copy">
+					<!-- temp fix to link to location twitter pages .by Jaime 	-->
+					<ul class="twitterfeed"></ul>
+					<!-- temp fix to link to location twitter pages .by chris -->
+					<div style="margin-top:15px;">To learn more about our delicious specials call <%= location.phone_number %></div>
+					<!-- hidden by Jaime <a href="https://twitter.com/BCDGlenarm" target="_blank">Check them out on Twitter</a>-->
+				</div>
+				<!-- specials_copy -->
+			</div>
+			<!-- specials -->
+
+		</div>
+		<!-- main-sidebar -->
+
+	</div>
+	<!-- location_content -->
+</div>
+<!-- end #content -->

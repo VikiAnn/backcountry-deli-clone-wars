@@ -32,4 +32,9 @@ class LocationStore
     data = data.inject({}){|memo, (k,v)| memo[k.to_sym] = v; memo}
     @database.from(:locations).insert(data)
   end
+
+  def find_by_slug(slug)
+    raw_location = @database[:locations].where(slug: slug).first
+    location = Location.new(raw_location)
+  end
 end

@@ -124,44 +124,15 @@ class App < Sinatra::Base
                                 body_class: "page page-id-299 page-child parent-pageid-9 page-template page-template-page-menu-php",
                                 locations: DB.all}
   end
-  #
-  # get '/location_:location_slug' do
-  #   @location = Sequel[:locations].f
-  # end
 
-  get '/location_steamboat_springs_co' do
-    erb :location_steamboat_springs_co, locals:{page_name: :steamboat,
-                                                title: "Steamboat Springs, CO - Backcountry Delicatessen",
-                                                body_class: "page page-id-11 page-child parent-pageid-10 page-template page-template-page-location-php",
-                                                locations: DB.all}
-  end
+  get '/location_:location_slug' do
+    location = DB.find_by_slug(params[:location_slug])
+    erb :location_view, locals:{title:  "#{location.name} - Backcountry Delicatessen",
+                                body_class:  "page page-child page-template page-template-page-location-php",
+                                locations: DB.all,
+                                location: location
+                                }
 
-  get '/location_denver_lodo_co' do
-    erb :location_denver_lodo_co, locals:{page_name:  :location_denver_lodo_co,
-                                          title:  "Denver, CO - Backcountry Delicatessen",
-                                          body_class:  "page page-id-17 page-child parent-pageid-10 page-template page-template-page-location-php",
-                                          locations: DB.all}
-  end
-
-  get '/location_denver_downtown_co' do
-    erb :location_denver_downtown_co, locals:{page_name: :downtown,
-                                              title: "Denver 17th & Glenarm - Backcountry Delicatessen",
-                                              body_class: "page page-id-653 page-child parent-pageid-10 page-template page-template-page-location-php",
-                                              locations: DB.all}
-  end
-
-  get '/location_fort_collins_co' do
-    erb :location_fort_collins_co, locals:{page_name: :location_fort_collins_co,
-                                           title: "Fort Collins, CO - Backcountry Delicatessen",
-                                           body_class: "page page-id-15 page-child parent-pageid-10 page-template page-template-page-location-php",
-                                           locations: DB.all}
-  end
-
-  get '/location_jackson_hole_wy' do
-    erb :location_jackson_hole_wy, locals:{page_name:  :location_jackson_hole_wy,
-                                           title:  "Jackson Hole, WY - Backcountry Delicatessen",
-                                           body_class:  "page page-id-13 page-child parent-pageid-10 page-template page-template-page-location-php",
-                                           locations: DB.all}
   end
 
   get '/order_wazee_denver' do
@@ -173,9 +144,7 @@ class App < Sinatra::Base
 
   get '/admin' do
     protected!
-    erb :admin, locals:{title: "Admin - Backcountry Delicatessen",
-                        body_class: "page",
-                        locations: DB.all}
+    redirect '/admin/locations'
   end
 
   get '/admin/locations' do
@@ -194,7 +163,6 @@ class App < Sinatra::Base
                                 }
   end
 
-  # Work in progress
   put '/admin/locations/:location_id' do
     protected!
     id = params[:location_id]
