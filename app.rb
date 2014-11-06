@@ -3,6 +3,7 @@ require 'bundler'
 Bundler.require
 
 class App < Sinatra::Base
+  set :method_override, true
 
   configure :development do
     DB = LocationStore.new('postgres://localhost/backcountry')
@@ -192,12 +193,21 @@ class App < Sinatra::Base
                                 location: DB.find(params[:location_id])
                                 }
   end
-  
+
   # Work in progress
-  # post '/admin/locations/:location_id' do
-  #   protected!
-  #   DB.update
-  # end
+  put '/admin/locations/:location_id' do
+    protected!
+    id = params[:location_id]
+    DB.update(id, params[:location])
+    redirect '/admin/locations'
+  end
+
+  delete '/:location_id' do
+    protected!
+    id = params[:location_id]
+    DB.delete(id)
+    redirect '/admin/locations'
+  end
 
   def protected!
     return if authorized?

@@ -8,7 +8,7 @@ class LocationStore
   end
 
   def all
-    @database[:locations].map do |data|
+    @database[:locations].order(:id).map do |data|
       Location.new(data)
     end
   end
@@ -19,7 +19,12 @@ class LocationStore
   end
 
   # Work in progress
-  # def update
-  #   @database[:locations]
-  # end
+  def update(id, data)
+    data = data.inject({}){|memo, (k,v)| memo[k.to_sym] = v; memo}
+    location = @database.from(:locations).where(:id => id).update(data)
+  end
+
+  def delete(id)
+    @database.from(:locations).where(:id => id).delete
+  end
 end
