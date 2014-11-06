@@ -27,4 +27,9 @@ class LocationStore
   def delete(id)
     @database.from(:locations).where(:id => id).delete
   end
+
+  def create(data)
+    data = data.inject({}){|memo, (k,v)| memo[k.to_sym] = v; memo}
+    @database.from(:locations).insert(data)
+  end
 end

@@ -187,7 +187,7 @@ class App < Sinatra::Base
 
   get '/admin/locations/:location_id/edit' do
     protected!
-    erb :location_edit, locals:{title:  "Edit Locations",
+    erb :location_edit, locals:{title:  "Edit Location",
                                 body_class:  "page",
                                 locations: DB.all,
                                 location: DB.find(params[:location_id])
@@ -202,7 +202,22 @@ class App < Sinatra::Base
     redirect '/admin/locations'
   end
 
-  delete '/:location_id' do
+  get '/admin/locations/new' do
+    protected!
+    erb :location_create, locals:{title:  "New Location",
+                                body_class:  "page",
+                                locations: DB.all
+                                }
+  end
+
+  post '/admin/locations' do
+    protected!
+    DB.create(params[:location])
+    redirect '/admin/locations'
+  end
+
+
+  delete '/admin/locations/:location_id' do
     protected!
     id = params[:location_id]
     DB.delete(id)

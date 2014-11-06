@@ -1,29 +1,14 @@
-<html>
-  <head>
-    <title>Location Edit</title>
-  </head>
-  <body>
-    <h1>Backcountry Deli Locations</h1>
+<h1>Backcountry Deli Locations</h1>
 
-    <form action='/admin/locations/<%= location.id %>' method='POST'>
-      <p>
-        <% if location.id %>
-          Edit Location:
-        <% else %>
-          New Location:
-        <% end %>
-      </p>
-      <% if location.id %>
-        <input type="hidden" name="_method" value="PUT" />
-      <% end %>
-      <p>Name:  <input type='text' name='location[name]' value="<%= location.name %>"/></p>
-      <p>Hours1:  <input type='text' name='location[hours1]' value='<%= location.hours1 %>' /></p>
-      <p>Hours2:  <input type='text' name='location[hours2]' value='<%= location.hours2 %>'></p>
-      <p>Area:  <input type='text' name='location[area]' value='<%= location.area %>'></p>
-      <p>Address:  <input type='text' name='location[address]' value='<%= location.address %>'></p>
-      <p>City_State_Zip:  <input type='text' name='location[city_state_zip]'value='<%= location.city_state_zip %>'></p>
-      <p>Phone:  <input type='text' name='location[phone_number]'value='<%= location.phone_number %>'></p>
-      <input type='submit'/>
-    </form>
-  </body>
-</html>
+<form action='/admin/locations/<%= location.id %>' method='POST'>
+  <p>Edit Location:</p>
+  <input type="hidden" name="_method" value="PUT">
+  <p>Name:  <input type='text' name='location[name]' value="<%= location.name %>"></p>
+  <p>Hours1:  <input type='text' name='location[hours1]' value='<%= location.hours1 %>'></p>
+  <p>Hours2:  <input type='text' name='location[hours2]' value='<%= location.hours2 %>'></p>
+  <p>Area:  <input type='text' name='location[area]' value='<%= location.area %>'></p>
+  <p>Address:  <input type='text' name='location[address]' value='<%= location.address %>'></p>
+  <p>City_State_Zip:  <input type='text' name='location[city_state_zip]' value='<%= location.city_state_zip %>'></p>
+  <p>Phone:  <input type='text' name='location[phone_number]' value='<%= location.phone_number %>'></p>
+  <input type='submit'>
+</form>
