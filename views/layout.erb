@@ -314,7 +314,7 @@
         <% locations.each_with_index do |location, index| %>
           <div id="black-studio-tinymce-<%= index + 6 %>" class="footer-containers widget_black_studio_tinymce">
             <div class="textwidget">
-              <h2><a title="<%= location %>" href="/location_denver_lodo_co"><%= location.name %></a></h2>
+              <h2><a title="<%= location %>" href="/location_<%= location.slug %>"><%= location.name %></a></h2>
               <div class="clearfix"> </div>
               <p>
                 <%= location.hours1 %>
